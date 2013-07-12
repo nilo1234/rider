@@ -1,0 +1,87 @@
+package com.fuckboy.controller;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.fuckboy.manager.UserManager;
+import com.fuckboy.model.Operate;
+import com.fuckboy.model.User;
+ 
+@Controller   //spring mvc的思想 dao层对应注解： @Repository(value="operateDao")，业务层注解
+public class LoginController{
+   @Autowired
+	private UserManager operateManager;
+	private String path;
+	LoginController(){
+		System.out.println("LoginController初始化中");
+	}
+	/**
+	 * 通过传统的方法验证登陆
+	 * @param request
+	 * @param respnose
+	 * @param operate
+	 * @return
+	 * @throws Exception 
+	 */
+	@RequestMapping("/login.htm")
+	public ModelAndView login(HttpServletRequest request, HttpServletResponse respnose,User user) throws Exception{
+		 System.out.println("顺利进入");
+		 System.out.println(operateManager.queryOperate(user));
+		if(user==null){
+			 return new ModelAndView("login/login");
+		}
+		  return new ModelAndView("login/login");
+	}
+	
+	@RequestMapping("/login2.do")
+	public ModelAndView login2(HttpServletRequest request, HttpServletResponse respnose,Operate operate){
+		 Operate op = operate ;
+		 System.out.println("顺利进入");
+		if(op==null){
+			return new ModelAndView("login/login");
+		}
+		 return new ModelAndView("login/login");
+	}
+	/**
+	 * 通过DWR验证
+	 * @param operate
+	 * @return
+	 */
+	@RequestMapping(value="/login/getCode.do", method = RequestMethod.POST)  
+	 @ResponseBody  
+	public List<Operate> loginDwr(Operate operate){
+		List<Operate> list =  (new ArrayList<Operate>());
+	     list.add(operate);
+	     return list;
+	}
+	
+	
+	@RequestMapping(value="/login/getObject.do", method = RequestMethod.POST)  
+	 @ResponseBody  
+	public  Operate  getObject(Operate operate){
+	     return operate;
+	}
+	
+  
+	public UserManager getOperateManager() {
+		return operateManager;
+	}
+	public void setOperateManager(UserManager operateManager) {
+		this.operateManager = operateManager;
+	}
+	public String getPath() {
+		return path;
+	}
+	public void setPath(String path) {
+		this.path = path;
+	}
+}

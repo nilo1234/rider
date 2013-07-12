@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="APP_VERSION">
+  <select id="RICH_QRY_APPVERSION"  parameterType="AppVersionReqBean" resultType="AppVersionRespBean">
+ select t3.is_new_version,t3.new_version,t3.version_release_time,
+ 		t4.software_name,t4.software_file,t4.software_path,t4.is_force_update,t4.version_descrip
+ from 
+ 	app_version t4,
+ 	(select case when t1.version_release_time>t2.version_release_time then 0 else 1 end is_new_version,t1.new_version,to_char(t1.version_release_time,'yyyyMMddhh24miss')version_release_time
+        from 
+       (select max(version_release_time)version_release_time,version_id new_version from app_version where  app_id=${app_id} group by version_id) t1,
+       (select version_release_time,version_id new_version from app_version where version_id='${curr_version}' and app_id = ${app_id}) t2)t3
+       
+       where t3.new_version=t4.version_id(+)
+       and is_new_version=0
+
+  </select>
+</mapper>

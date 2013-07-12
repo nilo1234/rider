@@ -1,0 +1,71 @@
+body {
+	font-size: 14px;
+	font-family: "ËÎÌו";
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+
+.bodyCommon {
+	background-color: #fafafa !important;
+}
+
+.tableCommon {
+	background-color: silver !important;
+	border-collapse: collapse;
+}
+
+.tableCommon td {
+	background-color: #fafafa !important;
+	empty-cells: show;
+}
+.tableFilterCommon{
+	background-color: #fafafa !important;
+	filter:alpha(opacity=90);
+}
+.tableTitle {
+	color: #333333;
+}
+
+.tableTitle_underline {
+	text-decoration: underline;
+	color: #333333;
+}
+
+ 
+
+.fixedDiv {
+	overflow: auto;
+	height: expression(document .           body .           clientHeight);
+	width: expression(document .           body .           clientWidth);
+	BORDER-BOTTOM: #99bbe8 1pt solid;
+	BORDER-LEFT: #99bbe8 1pt solid;
+	BORDER-RIGHT: #99bbe8 1pt solid;
+	BORDER-TOP: #99bbe8 1pt solid;
+	vertical-align: top;
+	width: 100%;
+}
+
+#detailTbody tr{
+	background:#ffffff;
+	background-color:#ffffff
+}
+#detailTable  .td-title{
+	background: url("../images/comm/tableheader.png") repeat-x;
+}
+ #fixeTableMenu{
+     margin-top:5px;
+	 width: 100%;
+	 height:20px;
+	 background:#efefef;
+	 border-left:1px solid #99bbe8;border-right:1px solid #99bbe8;border-top:1px solid #99bbe8;background: #e1e1e1
+ }
+ .fixedHeaderTr {
+	background-color: #cccccc;
+	position: relative;
+	top: expression(this.offsetParent.scrollTop);
+	z-index: 20;
+}

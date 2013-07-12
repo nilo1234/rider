@@ -1,0 +1,15 @@
+package com.fuckboy.common;
+
+/**
+ * @author Administrator
+ * 
+ * 用来初始化 系统参数
+ * 
+ * 加载数据库缓存
+ * 
+ * 加载静态菜单
+ *
+ */
+public class SystemInit {
+
+}

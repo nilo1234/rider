@@ -1,0 +1,8 @@
+   
+
+
+<body onClose="">
+     <input type="file" id="uploadFile" /> 
+     <input type="button" onclick="uploadFile()" value="upload"/> 
+</body>
+</html>

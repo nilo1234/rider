@@ -1,0 +1,10 @@
+package com.fuckboy.model;
+
+public class OperationResp {
+	
+	
+	private int count;
+	
+	 
+
+}

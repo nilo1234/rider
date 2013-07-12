@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+       http://www.directwebremoting.org/schema/spring-dwr http://www.directwebremoting.org/schema/spring-dwr-3.0.xsd">
+	
+	 <!-- getHomeCountryList -->
+	
+	<!-- 测试一些功能 -->
+	<!-- <bean id="TestController" class="com.newland.purchase.test.controller.TestController">
+	  <property name="commonDao" ref="commonDao"></property>
+	  <dwr:remote javascript="TestController">
+	     <dwr:include method="test"/>
+	  </dwr:remote>
+	</bean> -->
+	
+<!-- 版本检测 -->
+  <bean id="appVerisonController" class="com.rider.controller.AppVersionController">
+	  <property name="appVersionManager" ref="appVersionManager"></property>
+	   <dwr:remote javascript="AppVersionController">
+		    <dwr:include method="RICH_QRY_APPVERSION"/>
+		</dwr:remote>
+ </bean>
+ <!-- 注册 -->
+  <bean id="registrationController" class="com.rider.controller.RegistrationController">
+	  <property name="registrationManager" ref="registrationManager"></property>
+	   <dwr:remote javascript="RegistrationController">
+		    <dwr:include method="RIDER_REGISTRATION"/>
+		</dwr:remote>
+	</bean>
+	 <!-- 登陆 -->
+  <bean id="loginController" class="com.rider.controller.LoginController">
+	  <property name="loginManager" ref="loginManager"></property>
+	   <dwr:remote javascript="LoginController">
+		    <dwr:include method="userLogin"/>
+		</dwr:remote>
+	</bean>
+	
+</beans>

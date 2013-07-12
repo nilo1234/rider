@@ -1,0 +1,25 @@
+bizAccept_url=http://10.223.53.133:6001/fcgi-bin/Fcgi_SysMgrService
+serverUrl1=10.1.0.241
+port1=7898
+serverUrl2=10.1.0.241
+port2=7898
+
+
+jdbc.driverClassName=oracle.jdbc.driver.OracleDriver
+#jdbc.url=jdbc:oracle:thin:@10.223.53.132:nxdb
+#jdbc.username=nx_mall
+#jdbc.password=mall012$$
+jdbc.url=jdbc:oracle:thin:@10.1.0.189:1521:vgop
+jdbc.username=t_nx_groupon
+jdbc.password=t_nx_groupon
+ 
+# jdbc.url=jdbc:oracle:thin:@10.1.4.47:1521:orcl
+#jdbc.username=nx_groupon
+# jdbc.password=nx_groupon
+ 
+jdbc.c3p0.acquire_increment=150
+jdbc.c3p0.min_size=10
+jdbc.c3p0.max_size=20
+jdbc.c3p0.timeout=1800
+jdbc.c3p0.max_statements=0
+jdbc.c3p0.idle_connection_test_period=120

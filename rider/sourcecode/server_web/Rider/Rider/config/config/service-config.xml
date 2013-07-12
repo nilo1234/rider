@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services>
+<service id="RIDER_ADDR_SERVICE" req=""  obj="loginController"  class="com.rider.controller.LoginController" method="userLogin" ></service>
+<service id="RIDER_QRY_APPVERSION" req="" obj="appVerisonController"  class="com.rider.controller.AppVersionController" method="RICH_QRY_APPVERSION" ></service>
+<service id="RIDER_REGISTRATION" req="" obj="registrationController"  class="com.rider.controller.RegistrationController" method="RIDER_REGISTRATION" ></service>
+<service id="RIDER _LOGIN_INFO" req="" obj="loginController"  class="com.rider.controller.LoginController" method="userLogin" ></service>
+</services>

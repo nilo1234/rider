@@ -1,0 +1,66 @@
+@CHARSET "UTF-8";body{
+  width:100%;
+  margin: 0px,auto;
+  background-color: e2e2e2;
+  overflow: auto;
+  
+     }
+ .infoTable td{
+  font-size:14px;
+  height:35px
+ }
+ .type_input,#file{
+	width:200px;
+	height:23px;
+	line-height:20px;
+   border: 1px solid #CCCCCC;
+   font-size:14px;
+ }
+ .infoTable .warn{
+ height:25px;
+ padding-left:17px;
+ padding-top:1px;
+ padding-right:5px;
+ margin-left:5px;
+ background: url("../../images/main/close_smal.png") no-repeat;
+ background-position:left;
+ background-origin:padding-box;
+ border:1px solid #e2e2e2;
+ vertical-align: middle;
+ background-color:#fff1f1;
+ font-size: 14px;
+ }    
+.error{
+ visibility:visible;
+}
+.normal{
+ visibility:hidden;
+}
+.backColor{
+background:#e2e2e2
+}
+.red{
+color:red
+}
+ContSty .pageTd{border:0;border-collapse:collapse;padd:expression(this.cellPadding=0);padd:expression(this.cellSpacing=0); margin-right:18px; display:inline; cursor:hand}
+.pageTd .pageL{ background:url(../../images/main/page_Left.png) no-repeat; width:14px; height:34px}
+.pageTd .pageC{ background:url(../../images/main/page_Center.png) repeat-x; padding:0 5px; text-align:center; color:#000; padding-top:2px}
+ .pageTd .pageR{ background:url(../../images/main/page_Right.png) no-repeat; width:14px; height:34px}
+ .pageTd,.pointer{cursor: pointer;}
+ .hidd{display: none;}
+ .closeWindow{
+ position: relative;
+ }
+ .mwindow{
+ z-index: 101;
+ position: absolute; 
+ background:#fff;
+ border:2px solid #ccc;
+ border-radius:10px;
+ margin: 0px;
+ padding: 0px;
+ }
+ .huttonA{height:20px}
+ .file_input{
+ width:270px;
+ }

@@ -1,0 +1,34 @@
+/* ---通用样式-- */
+*{ margin:0px; padding:0px}
+img{ border:0px}
+body{ background-color:#f7f7f7}
+td{ font-size:12px}
+a{ color:#000; text-decoration:none}
+a:hover{ color:#c3231c; text-decoration:none}
+.ComTdSty{border:0;border-collapse:collapse;padd:expression(this.cellPadding=0);padd:expression(this.cellSpacing=0)}
+.TdListSty{border:0;border-collapse:collapse;padd:expression(this.cellPadding=0);padd:expression(this.cellSpacing=0)}
+.TdListSty tr td{ margin:0; padding:0}
+.AlignL{ text-align:left}
+.AlignC{ text-align:center}
+.AlignR{ text-align:right}
+.AlignT{ vertical-align:top}
+.W100{ width:100%}
+.H100{ height:100%}
+.RedF{ color:#c3231c}
+/* ---登录--- */
+.LoginSty{ background-color:#f6f7f7;border:0;border-collapse:collapse;padd:expression(this.cellPadding=0);padd:expression(this.cellSpacing=0); margin:0 auto}
+.LoginSty .log01{ background:url(../images/main/login_01.jpg) no-repeat; width:332px; height:240px}
+.LoginSty .log02{ background:url(../images/main/login_02.jpg) no-repeat; width:337px; height:240px}
+.LoginSty .log03{ background:url(../images/main/login_03.jpg) no-repeat; width:331px; height:240px}
+.LoginSty .log04{ background:url(../images/main/login_04.jpg) no-repeat; width:332px; height:222px}
+.LoginSty .log05{ background:url(../images/main/login_05.jpg) no-repeat; width:337px; height:222px; vertical-align:top}
+.LoginSty .log06{ background:url(../images/main/login_06.jpg) no-repeat; width:331px; height:222px}
+.LoginSty .log07{ background:url(../images/main/login_07.jpg) no-repeat; width:332px; height:180px; text-align:right; vertical-align:top}
+.LoginSty .log08{ background:url(../images/main/login_08.jpg) no-repeat; width:337px; height:180px; text-align:center; vertical-align:top; padding-top:40px}
+.LoginSty .log09{ background:url(../images/main/login_09.jpg) no-repeat; width:331px; height:180px; text-align:left; vertical-align:top}
+.LoginSty .loginBox{ border:0;border-collapse:collapse;padd:expression(this.cellPadding=0);padd:expression(this.cellSpacing=0); width:337px}
+.LoginSty .loginBox .lg_tiltle{ color:#ce4c1e; font-weight:bold; font-size:12px; width:114px; height:27px; text-align:right; vertical-align:middle; padding-right:3px}
+.LoginSty .loginBox .lg_inText{ border:1px solid #ffa583; height:21px; padding-left:3px; padding-top:2px}
+.LoginSty .loginBox .lg_btn{ height:60px; text-align:left; vertical-align:middle}
+.other{display: inline-block;line-height: 25px;color:#fff;font-weight: 700;margin-left: 5px;}
+.floatLeft{float:left}

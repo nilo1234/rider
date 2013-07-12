@@ -1,0 +1,42 @@
+package com.fuckboy.model;
+
+
+public class Operate {
+	private int operateId;
+	private String operateName;
+	private String operateCode;
+	private String  operatePasswords;
+	public Operate(){}
+	public Operate(int operateId,String operateName,String operateCode,String operatePasswords){
+		this.operateId=operateId;
+		this.operateName=operateName;
+		this.operateCode=operateCode;
+		this.operatePasswords=operatePasswords;
+	}
+	public int getOperateId() {
+		return operateId;
+	}
+	public void setOperateId(int operateId) {
+		this.operateId = operateId;
+	}
+	public String getOperateName() {
+		return operateName;
+	}
+	public void setOperateName(String operateName) {
+		this.operateName = operateName;
+	}
+	public String getOperateCode() {
+		return operateCode;
+	}
+	public void setOperateCode(String operateCode) {
+		this.operateCode = operateCode;
+	}
+	public String getOperatePasswords() {
+		return operatePasswords;
+	}
+	public void setOperatePasswords(String operatePasswords) {
+		this.operatePasswords = operatePasswords;
+	}
+	
+
+}

@@ -1,0 +1,22 @@
+package com.fuckboy.manager;
+
+import com.fuckboy.dao.OperateDao;
+import com.fuckboy.model.User;
+
+public class UserManager {
+		private OperateDao operateDao;
+	    /**
+	     * ≤È—Ø
+	     * @param user
+	     * @return
+	     */
+	   public User queryOperate(User user){
+		    return operateDao.queryOperate(user);
+	   }
+	   
+	   
+	public void setOperateDao(OperateDao operateDao) {
+		this.operateDao = operateDao;
+	}
+	   
+}

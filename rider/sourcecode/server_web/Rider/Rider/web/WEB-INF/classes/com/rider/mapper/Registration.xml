@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="REGISTRATION">
+  <select id="isUsedUserName"  parameterType="RegistrationReqBean" resultType="RegistrationReqBean">
+  	 select nick_name user_name,email email_addr,passwd password 
+  	 from rider_user
+  	 where nick_name=#{user_name}
+  </select>
+  <select id="isUsedEmailAddr"  parameterType="RegistrationReqBean" resultType="RegistrationReqBean">
+  	 select nick_name user_name,email email_addr,passwd password 
+  	 from rider_user
+  	 where email=#{email_addr}
+  </select>
+  <select id="getPhoneSeq"  resultType="String">
+     select phone_sequence.nextval from dual
+  </select>
+  <insert id="RIDER_REGISTRATION_USER"  parameterType="RegistrationReqBean" >
+    <selectKey keyProperty="user_id" order="BEFORE" resultType="String">
+		 select user_sequence.nextval from dual
+  	</selectKey>
+  	insert into rider_user (user_id,nick_name,passwd,email,phone_id) 
+  	     values (#{user_id},#{user_name,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR},#{email_addr,jdbcType=VARCHAR},#{phone_id}) 
+  	
+  </insert>
+  <insert id="RIDER_REGISTRATION_PHONE" parameterType="PhoneEnv">
+  insert into phone_env(phone_id,phone_imei,phone_iesi,phone_type,phone_sys,phone_model,waln_addr,bluetooth_addr,network,system_time,sys_version,gprs_ip,wlan_ip,type) 
+  values (#{phone_id,jdbcType=VARCHAR},#{phone_imei,jdbcType=VARCHAR},#{phone_iesi,jdbcType=VARCHAR},#{phone_type,jdbcType=VARCHAR},#{phone_sys,jdbcType=VARCHAR},#{phone_model,jdbcType=VARCHAR},#{wlan_addr,jdbcType=VARCHAR},#{bluetooth_addr,jdbcType=VARCHAR},#{network,jdbcType=VARCHAR},#{system_time,jdbcType=VARCHAR},#{sys_version,jdbcType=VARCHAR},#{gprs_ip,jdbcType=VARCHAR},#{wlan_ip,jdbcType=VARCHAR},0)
+  </insert>
+  
+</mapper>

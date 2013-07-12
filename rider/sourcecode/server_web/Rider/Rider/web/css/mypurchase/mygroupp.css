@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+body{scrollbar-arrow-color:#ff6633;scrollbar-face-color:#ff9933;scrollbar-darkshadow-color:#ffcc66;scrollbar-highlight-color:#ffffcc;scrollbar-3dlight-color:#ff9900;scrollbar-shadow-color:#808080;scrollbar-track-color:#ffffff;}
+.all_container{overflow-y:auto;width:100%;}
+.search_input_wrap{border-bottom:#cdcdcd 1px solid;border-left:#9a9a9a 1px solid;width:418px;height:30px;display:inline-block;background:url(../../images/comm/search.png) no-repeat -304px 0px;border-top:#9a9a9a 1px solid;margin-right:5px;border-right:#cdcdcd 1px solid;}
+.search_input_wrap .search_input{border-bottom:0px;border-left:0px;padding-bottom:0px;padding-left:0px;padding-right:0px;border-top:0px;border-right:0px;margin:5px 0px 0px 7px;outline-style:none;outline-color:invert;outline-width:medium;width:405px;font:16px/22px arial;background:#fff;height:22px;-webkit-appearance:none;}
+.search_button_wrap{z-index:0;width:97px;display:inline-block;background:url(../../images/comm/search.png) no-repeat -202px 0px;height:34px;vertical-align:top;}
+.search_button{border-bottom:0px;border-left:0px;padding-bottom:0px;padding-left:0px;padding-right:0px;border-top:0px;border-right:0px;padding-top:0px;width:95px;background:url(../../images/comm/search.png) #ddd;height:32px;font-size:14px;cursor:pointer;padding-top:2px;}
+.search_button_h{background-position:-100px 0px;}
+.container{width:90%;border:1px solid transparent;border-bottom:1px solid #ddd;height:220px;margin:3px auto;text-align:center;}
+.container:hover{border:1px solid #ff6600;}
+.container img{vertical-align:left;margin-top:10px;margin-bottom:10px;margin-left:15px;}
+.container_left{float:left;width:230px;height:100%;}
+.container_line{float:left;width:1px;height:180px;background:#ccccff;margin:10px;}
+.container_right{float:left;height:100%;width:70%;position:relative;}
+.container_right span{margin-top:10px;display:inline-block;}
+.container_right p{text-indent:2em;text-align:left;}
+.accept_btn{right:10px;top:70%;;position:absolute;background:url(../../images/comm/easyui_btn.png) no-repeat;width:120px;height:30px;border:none;line-height:30px;text-align:center;cursor:hand;font-size:14px;display:inline-block;}
+.accept_btn:hover{background:url(../../images/comm/easyui_hover_btn.png) no-repeat;}

@@ -1,0 +1,193 @@
+﻿
+@charset "utf-8"; 
+@charset "utf-8";
+body {
+	margin: 0 auto;
+	text-align: center;
+	padding: 0;
+	font: 14px/1.5 tahoma, arial, 宋体, sans-serif;
+	overflow:hidden;
+}
+*{
+	scrollbar-arrow-color:#669999;scrollbar-face-color:#ebf2f8;scrollbar-darkshadow-color:#66cccc;scrollbar-highlight-color:#ffffff;scrollbar-3dlight-color:#ebf2f8;scrollbar-shadow-color:#ffffff;scrollbar-track-color:#ffffff;
+}
+
+div {
+	margin: 0;
+	padding: 0;
+}
+
+input{
+	vertical-align:middle;
+}
+img {
+	border: none;
+}
+
+td { 
+	font-size:13px; 
+	color:#333333; 
+}
+
+ul,ol,li {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	list-style-type: none
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+a:hover { 
+	color:#d21616; 
+	text-decoration:none; 
+}
+a:visited {
+	text-decoration: none;
+}
+
+select {
+	font: 13px/1.5 tahoma, arial, 宋体, sans-serif;
+	border: 1px solid #7f9db9;
+}
+fieldset{
+padding:0px;
+width:100%;
+margin:0px;
+heigth:100%
+}
+.commback{
+	background-color: #f7f7f7
+}
+textarea{   
+	word-wrap:break-word;
+	word-break:break-all;
+	border: 1px solid #7f9db9;/* #99bbe8; */
+	overflow: auto;
+} 
+/*-main页面上边框，修饰用-*/
+.PageContBg {
+	background: url(../../images/main/PageContBg.gif) top repeat-x;
+	padding-top: 15px;
+	_background: none; 
+	/* _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="../images/main/PageContBg.gif");
+	 */
+}
+
+ 
+
+/********普通搜索table样式**********/
+.searchTable td{
+height:15px;
+}
+
+/*设定一般搜索框的宽度*/
+.searchTable input,.searchTable select,.searchTable .dateInput{
+width:190px;
+text-overflow:ellipsis 
+}
+ 
+/**文本右据**/
+.rightTD{
+text-align: right;
+padding-right: 2px;
+}
+.leftTD{
+	text-align: left;
+}
+.center{
+	text-align: center
+}
+/****inptut 框 只有 下画虚线，用于只读input框******/
+ 
+.readyOnlyT input,.readyOnlyT select{
+	border:0px;
+	border-bottom-width:1px;
+	border-bottom-style:dashed;
+	border-bottom-color: #d5dfe5;
+	background:#f7f7f7;
+}
+.readyOnlyT p{
+	border:0px;
+	border-bottom-style:dashed;
+	border-bottom-width:1px;
+	border-bottom-color:#d5dfe5;
+	word-wrap: break-word;
+	word-break:break-all;
+}
+.readyOnlyT textarea{
+	border-style:dashed;
+	border-width:1px;
+	border-color:#d5dfe5;
+	word-wrap: break-word;
+	word-break:break-all;
+	 background-color:#f7f7f7;
+	 overflow: auto;
+}
+. DIV{
+	word-wrap:break-word;
+}
+
+/**子页面基本辈景色**/
+body{ background-color:#f7f7f7}
+.tableBody {background: #ffffff}
+td{
+margin: 0px;
+padding: 0px
+}
+
+/****中间部分 上面的渐变色****/
+.ContBg{  
+	vertical-align:top;
+	background-color:#fff;
+	background:#f7f7f7 url(../images/main/ContBg.gif) top repeat-x; 
+	height:100%
+	}
+.file_input{
+	border:1px solid #ccc;
+	height:24px;
+	background-color:#fff;
+}
+/*table的下划线*/
+.border-line{
+padding:0px;
+margin:0px;
+border-bottom-width:1px;
+border-bottom-style:dashed;
+border-bottom-color: #d5dfe5
+}
+/****隐藏对象引用****/
+.hiddenO{
+	display: none
+}
+
+.red{
+	color: red;
+}
+/*file样式*/
+.filebt{
+	background-color:#FFF; border:1px solid #CDCDCD;height:24px; width:60px;}
+}
+.mfile{
+height:30px;
+width:60px;filter:alpha(opacity:0);opacity: 0;position: absolute;left:-5;top:-5;
+}
+/* -倒计时插件样式 - */
+.miao-showTime{width:198px; overflow:hidden; margin-bottom:10px;}
+.miao-timeBack{ height:70px;width:198px;text-align:left;background: url(../images/comm/time.gif) left -8px no-repeat;overflow:hidden;}
+.day,.hour,.mini,.sec{width:37px;height:47px;display:block;float:left;font-size:26px;font-family:Helvetica,arial,sans-serif;line-height:46px;text-align:center;/*color:#E11D1D*/color:#444;font-weight:400}
+.day{padding-left:12px}
+.hour{padding-left:13px}
+.mini{padding-left:8px}
+.sec{padding-left:8px} 
+.message{padding:0px; background-color:#FEE0E7; text-align:center;width:198px;}

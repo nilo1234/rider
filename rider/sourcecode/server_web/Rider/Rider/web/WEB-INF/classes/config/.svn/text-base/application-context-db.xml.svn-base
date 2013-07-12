@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+       http://www.directwebremoting.org/schema/spring-dwr http://www.directwebremoting.org/schema/spring-dwr-3.0.xsd">
+
+<bean id="propertyConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:config/jdbc.properties</value>
+            </list>
+        </property>
+    </bean>
+
+<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"  destroy-method="close">
+		<property name="driverClass">
+			<value>${jdbc.driverClassName}</value>
+		</property>
+		<property name="jdbcUrl">
+			<value>${jdbc.url}</value>
+		</property>
+	 
+		<property name="user">
+			<value>${jdbc.username}</value>
+		</property>
+		<property name="password">
+			<value>${jdbc.password}</value>
+		</property>
+
+		<property name="minPoolSize">
+			<value>${jdbc.c3p0.min_size}</value>
+		</property>
+		<property name="maxPoolSize">
+			<value>${jdbc.c3p0.max_size}</value>
+		</property>
+		<property name="maxIdleTime">
+			<value>${jdbc.c3p0.timeout}</value>
+		</property>
+		<property name="acquireIncrement">
+			<value>${jdbc.c3p0.acquire_increment}</value>
+		</property>
+		<property name="maxStatements">
+			<value>${jdbc.c3p0.max_statements}</value>
+		</property>
+		<property name="idleConnectionTestPeriod">
+			<value>${jdbc.c3p0.idle_connection_test_period}</value>
+		</property>
+	</bean>
+    
+
+  <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+	   <property name="dataSource" ref="dataSource" />
+  </bean>
+
+<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<property name="dataSource" ref="dataSource" />
+	 <property name="configLocation"> 
+	     <value>classpath:config/mybatis-config.xml</value>
+	 </property>
+	<property name="mapperLocations" value="classpath:com/fuckboy/mapper/*.xml" />
+</bean>
+
+ <!-- 
+   <bean id="mgmtLoggerIntroductor" class="com.newland.purchase.aopfilter.MgmtLoggerIntroductor" />
+  -->
+<bean id="baseTxService"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean" abstract="true">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="proxyTargetClass" value="true" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="get*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="find*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="query*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="search*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="list*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="page*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="load*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="read*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+		   <!--  拦截器 暂时不用
+			<property name="postInterceptors">
+			<list>
+				<ref local="mgmtLoggerIntroductor" />
+			</list>
+		</property>
+		  -->
+   </bean>
+
+</beans>

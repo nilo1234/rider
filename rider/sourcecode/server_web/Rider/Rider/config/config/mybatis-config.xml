@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+<settings>
+<setting name="cacheEnabled" value="true"/>
+<setting name="lazyLoadingEnabled" value="true"/>
+<setting name="defaultStatementTimeout" value="20000"/>
+</settings>
+	<typeAliases>
+		<typeAlias alias="AppVersionReqBean" type="com.rider.interfaces.param.AppVersionReqBean"/>
+		<typeAlias alias="AppVersionRespBean" type="com.rider.interfaces.param.AppVersionRespBean"/>
+		<typeAlias alias="RegistrationReqBean" type="com.rider.interfaces.param.RegistrationReqBean"/>
+		<typeAlias alias="PhoneEnv" type="com.rider.interfaces.param.PhoneEnv"/>
+		<typeAlias alias="LoginReqBean" type="com.rider.interfaces.param.LoginReqBean"/>
+		<typeAlias alias="UserLoginReqBean" type="com.rider.interfaces.param.UserLoginReqBean"/>
+	</typeAliases>
+</configuration>	

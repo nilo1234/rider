@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/4/trunk/Develop/SourceCode/MoneyCome/config/config
+END
+application-context-controller.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/4/trunk/Develop/SourceCode/MoneyCome/config/config/application-context-controller.xml
+END
+application-context-dao.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/4/trunk/Develop/SourceCode/MoneyCome/config/config/application-context-dao.xml
+END
+application-context-main.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/4/trunk/Develop/SourceCode/MoneyCome/config/config/application-context-main.xml
+END
+application-context-db.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/4/trunk/Develop/SourceCode/MoneyCome/config/config/application-context-db.xml
+END
+springmvc-servlet.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/4/trunk/Develop/SourceCode/MoneyCome/config/config/springmvc-servlet.xml
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/4/trunk/Develop/SourceCode/MoneyCome/config/config/log4j.properties
+END
+mybatis-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/4/trunk/Develop/SourceCode/MoneyCome/config/config/mybatis-config.xml
+END
+jdbc.properties
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/4/trunk/Develop/SourceCode/MoneyCome/config/config/jdbc.properties
+END

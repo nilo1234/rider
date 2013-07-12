@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+       http://www.directwebremoting.org/schema/spring-dwr http://www.directwebremoting.org/schema/spring-dwr-3.0.xsd">    
+       <bean id="appVersionManager" parent="baseTxService">
+         <property name="target">
+            <bean class="com.rider.manager.AppVersionManager">
+               <property name="appVersionDao" ref="appVersionDao"></property>
+            </bean>
+          </property>
+        </bean> 
+        
+         <bean id="registrationManager" parent="baseTxService">
+	         <property name="target">
+	            <bean class="com.rider.manager.RegistrationManager">
+	               <property name="registrationDao" ref="registrationDao"></property>
+	            </bean>
+	          </property>  
+    </bean>  
+          <bean id="loginManager" parent="baseTxService">
+	         <property name="target">
+	            <bean class="com.rider.manager.LoginManager">
+	               <property name="loginDao" ref="loginDao"></property>
+	            </bean>
+	          </property>  
+    </bean> 
+    
+</beans>

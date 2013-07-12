@@ -1,0 +1,8 @@
+package com.fuckboy.dao;
+
+import com.fuckboy.model.User;
+
+
+public interface OperateDao {
+	User  queryOperate(User operate);
+}
